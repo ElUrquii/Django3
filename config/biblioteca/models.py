@@ -15,12 +15,12 @@ class Prestamo(models.Model):
 
 class Material(models.Model):
     codigo = models.AutoField(primary_key = True)
-    prestamo = models.ForeignKey('Prestamo', on_delete = models.CASCADE, null = False)
     tipoMaterial = models.CharField(max_length = 100)
     autor = models.CharField(max_length = 30)
     titulo = models.CharField(max_length = 30)
     anio = models.IntegerField()
     status = models.CharField(max_length = 30)
+    prestamo = models.ForeignKey('Prestamo', on_delete = models.CASCADE, null = False)
 
     def altaMaterial():
         pass
