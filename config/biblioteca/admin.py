@@ -37,7 +37,7 @@ class LibroAdmin(admin.ModelAdmin):
     list_display = ('tipoMaterial','autor','titulo','anio','status','prestamo','editorial')
     fieldsets = (
         ('Descripcion', {
-            'fields':('tipoMaterial','autor', 'titulo', 'anio', 'editorial')
+            'fields':('tipoMaterial','autor', 'titulo', 'anio', 'editorial', 'portada')
         }),
         ('Estado', {
             'fields':('status','prestamo',)
