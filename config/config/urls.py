@@ -17,9 +17,10 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls import *
 from django.views.generic import RedirectView
+from config import settings
 
 urlpatterns = [
     url(r'^jet/', include('jet.urls', 'jet')),  # Django JET URLS
     path('admin/', admin.site.urls),
-    path('', RedirectView.as_view(url='admin/')),
+    path('', include('biblioteca.urls')),
 ]
